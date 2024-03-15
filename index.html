@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ip Info</title>
+  </head>
+  <body>
+    <button onclick="doit()">Get Ip Info</button>
+    <p id="out">No Output</p>
+    <script>
+      function doit() {
+        const url = "https://ipinfo.io/ip";
+        fetch(url, {
+          method: 'GET',
+          accept: '*/*',
+          headers: {
+            "Content-Type": "text/plain"
+          },
+          refferer: "https://ipinfo.io"
+        }).then((res) => res.text()
+        .then((t) => alert(t)));
+      }
+    </script>
+  </body>
+</html>
