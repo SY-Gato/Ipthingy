@@ -38,10 +38,10 @@
        //   out = out+String(t);
      //   }));
         const url2 = "https://ipinfo.io/widget/";
-        fetch(url2, {
-          method: 'GET',
-          accept: '*/*',
-          headers: {
+        /*fetch(url2, {
+          method: 'GET',*/
+          //accept: '*/*',
+          /*headers: {
             "Content-Type": "text/plain",
           },
           refferer: "https://ipinfo.io"
@@ -49,7 +49,11 @@
         .then((t) => {
           alert(t);
           //out = out+String(t);
-        }));
+        }));*/
+        fetch(url2).then((res) => res.text()
+                   .then((t) => {
+                     alert(t);
+                   }));
         //let e = document.getElementById("out");
         //e.value = out;
         
