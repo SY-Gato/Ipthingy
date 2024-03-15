@@ -42,16 +42,16 @@
           method: 'GET',
           accept: '*/*',
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "text/plain",
           },
           refferer: "https://ipinfo.io"
         }).then((res) => res.text()
         .then((t) => {
           alert(t);
-          out = out+String(t);
+          //out = out+String(t);
         }));
-        let e = document.getElementById("out");
-        e.value = out;
+        //let e = document.getElementById("out");
+        //e.value = out;
         
       }
     </script>
