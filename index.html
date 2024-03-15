@@ -8,7 +8,9 @@
     <p id="out">No Output</p>
     <script>
       function doit() {
+        let out = "";
         const url = "https://ipinfo.io/ip";
+        let url2;
         fetch(url, {
           method: 'GET',
           accept: '*/*',
@@ -17,7 +19,25 @@
           },
           refferer: "https://ipinfo.io"
         }).then((res) => res.text()
-        .then((t) => alert(t)));
+        .then((t) => {
+          out = t+String("\n");
+          url2 = "https://ipinfo.io/widget/demo/"+t;
+        }));
+        
+        fetch(url2, {
+          method: 'GET',
+          accept: '*/*',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          refferer: "https://ipinfo.io"
+        }).then((res) => res.text()
+        .then((t) => {
+          out = out+String(t);
+        }));
+        let e = document.getElementById("out");
+        e.value = out;
+        
       }
     </script>
   </body>
