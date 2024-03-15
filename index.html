@@ -20,7 +20,8 @@
           refferer: "https://ipinfo.io"
         }).then((res) => res.text()
         .then((t) => {
-          out = t+String("\n");
+          //out = t+String("\n");
+          alert(t);
           url2 = "https://ipinfo.io/widget/demo/"+t;
         }));
         
@@ -33,6 +34,7 @@
           refferer: "https://ipinfo.io"
         }).then((res) => res.text()
         .then((t) => {
+          alert(t);
           out = out+String(t);
         }));
         let e = document.getElementById("out");
