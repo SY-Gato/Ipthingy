@@ -9,6 +9,7 @@
     <script>
       function doit() {
         let out = "";
+        let ip = "";
         const url = "https://ipinfo.io/ip";
         //let url2;
         fetch(url, {
@@ -21,8 +22,22 @@
         }).then((res) => res.text()
         .then((t) => {
           //out = t+String("\n");
-          alert(t);
+          //alert(t);
+          ip = "ip: "+t+"\n";
+          fetch("https://ipinfo.io/widget/demo/"+t, {
+            method: 'GET',
+            accept: '*/*',
+            headers: {
+              "Content-Type": "text/plain"
+            },
+            referer: "https://ipinfo.io"
+          }).then((res2) => res.text()
+          .then((t2) => {
           //url2 = "https://ipinfo.io/widget/demo/"+t;
+            alert(t2);
+            ip += String(t2);
+            document.getElementById("out").textContent = ip;
+          }));
         }));
         
         //fetch(url2, {
