@@ -28,10 +28,10 @@
             method: 'GET',
             accept: '*/*',
             headers: {
-              "Content-Type": "text/plain"
+              "Content-Type": "application/json"
             },
             referer: "https://ipinfo.io"
-          }).then((res2) => res.text()
+          }).then((res2) => res2.text()
           .then((t2) => {
           //url2 = "https://ipinfo.io/widget/demo/"+t;
             alert(t2);
