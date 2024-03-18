@@ -34,12 +34,13 @@
           }).then((res2) => res2.text()
           .then((t2) => {
           //url2 = "https://ipinfo.io/widget/demo/"+t;
-            alert(t2);
-            ip += String(t2);
+            alert(t2)
+            out = ip+String.fromCharCode(10)+String(t2);
+            //ip += String(t2);
             
-            document.getElementById("out").textContent = ip;
+            document.getElementById("out").textContent = out;
           }));
-          document.getElementById("out").textContent = ip;
+          document.getElementById("out").textContent = out;
         }));
         
         //fetch(url2, {
