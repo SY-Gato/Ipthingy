@@ -9,25 +9,25 @@
     <script>
       function doit() {
         let out = "";
-        //const url = "https://ipinfo.io/ip";
+        const url = "https://ipinfo.io/ip";
         //let url2;
-        //fetch(url, {
-        //  method: 'GET',
-        //  accept: '*/*',
-        /*  headers: {
+        fetch(url, {
+          method: 'GET',
+          accept: '*/*',
+          headers: {
             "Content-Type": "text/plain"
           },
-          refferer: "https://ipinfo.io"
+          referer: "https://ipinfo.io"
         }).then((res) => res.text()
         .then((t) => {
           //out = t+String("\n");
           alert(t);
-          url2 = "https://ipinfo.io/widget/demo/"+t;
+          //url2 = "https://ipinfo.io/widget/demo/"+t;
         }));
         
-        fetch(url2, {
-          method: 'GET',*/
-         // accept: '*/*',
+        //fetch(url2, {
+      //    method: 'GET',
+       //   accept: '*/*',
        //   headers: {
       //      "Content-Type": "application/json",
       //    },
@@ -37,7 +37,7 @@
        //   alert(t);
        //   out = out+String(t);
      //   }));
-        const url2 = "https://ipinfo.io/widget/";
+        //const url2 = "https://ipinfo.io/widget/";
         /*fetch(url2, {
           method: 'GET',*/
           //accept: '*/*',
@@ -50,10 +50,10 @@
           alert(t);
           //out = out+String(t);
         }));*/
-        fetch(url2).then((res) => res.text()
-                   .then((t) => {
-                     alert(t);
-                   }));
+        //fetch(url2).then((res) => res.text()
+        //           .then((t) => {
+        //             alert(t);
+        //           }));
         //let e = document.getElementById("out");
         //e.value = out;
         
