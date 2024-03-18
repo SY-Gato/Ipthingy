@@ -8,6 +8,7 @@
     <p id="out">No Output</p>
     <script>
       function doit() {
+        document.getElementById("out").textContent = "";
         let out = "";
         let ip = "";
         const url = "https://ipinfo.io/ip";
@@ -23,7 +24,7 @@
         .then((t) => {
           //out = t+String("\n");
           //alert(t);
-          ip = "ip: "+t+"\n";
+          ip = t;
           fetch("https://ipinfo.io/widget/demo/"+t, {
             method: 'GET',
             accept: '*/*',
@@ -35,12 +36,15 @@
           .then((t2) => {
           //url2 = "https://ipinfo.io/widget/demo/"+t;
             alert(t2)
-            out = ip+String.fromCharCode(10)+String(t2);
+            //out = //ip+String.fromCharCode(10)+String(t2);
+            const ep = document.getElementById("out");
+            ep.writeLine("ip: "+ip);
+            ep.writeLine("VPN: "+String(t2["data"]["privacy"]["VPN"]));
             //ip += String(t2);
             
-            document.getElementById("out").textContent = out;
+            //document.getElementById("out").textContent = out;
           }));
-          document.getElementById("out").textContent = out;
+          //document.getElementById("out").textContent = out;
         }));
         
         //fetch(url2, {
