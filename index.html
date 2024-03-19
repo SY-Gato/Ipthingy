@@ -42,7 +42,8 @@
             //ep.writeLine("ip: "+ip);
             //ep.writeLine("VPN: "+String(t2["data"]["privacy"]["VPN"]));
             
-            ep.textContent = String("ip: "+ip+"<br>"+String(t2)+"<br>");
+            //ep.textContent = String("ip: "+ip+"<br>"+String(t2)+"<br>");
+            ep.innerHTML = String("ip: "+ip+"<br>"+String(t2)+"<br>");
             //ip += String(t2);
             
             //document.getElementById("out").textContent = out;
