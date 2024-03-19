@@ -11,6 +11,7 @@
         document.getElementById("out").textContent = "";
         let out = "";
         let ip = "";
+        let towrite = "";
         const url = "https://ipinfo.io/ip";
         //let url2;
         fetch(url, {
@@ -38,8 +39,10 @@
             alert(t2)
             //out = //ip+String.fromCharCode(10)+String(t2);
             const ep = document.getElementById("out");
-            ep.writeLine("ip: "+ip);
-            ep.writeLine("VPN: "+String(t2["data"]["privacy"]["VPN"]));
+            //ep.writeLine("ip: "+ip);
+            //ep.writeLine("VPN: "+String(t2["data"]["privacy"]["VPN"]));
+            
+            ep.textContent = String("ip: "+ip+"<br>"+String(t2)+"<br>");
             //ip += String(t2);
             
             //document.getElementById("out").textContent = out;
